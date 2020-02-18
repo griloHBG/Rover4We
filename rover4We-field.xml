@@ -1,0 +1,19 @@
+<!-- ======================================================
+	Model 		:: Rover for Robot Trekking (2016)
+		
+	Mujoco		:: Advanced physics simulation engine
+	Version		:: 0.1
+====================================================== -->
+<mujoco model="rover4We-field (v0.1)">
+
+	<include file="rover4We-only.xml"/>
+	
+	<asset>
+		<texture name="floor_tex" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 .2 .3" width="100" height="100" />
+		<material name="floor_material" texture="floor_tex" texuniform="true" />
+	</asset>
+	
+	<worldbody>
+		<geom name="ground" type="plane" size="5 5 1" pos="0 0 -.25" material="floor_material"/>
+	</worldbody>
+</mujoco>
